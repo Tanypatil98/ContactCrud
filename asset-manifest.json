@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ContactCrud/static/css/main.a2791706.chunk.css",
+    "main.js": "/ContactCrud/static/js/main.0be7c36b.chunk.js",
+    "main.js.map": "/ContactCrud/static/js/main.0be7c36b.chunk.js.map",
+    "runtime-main.js": "/ContactCrud/static/js/runtime-main.9b141591.js",
+    "runtime-main.js.map": "/ContactCrud/static/js/runtime-main.9b141591.js.map",
+    "static/css/2.83342f34.chunk.css": "/ContactCrud/static/css/2.83342f34.chunk.css",
+    "static/js/2.756518e8.chunk.js": "/ContactCrud/static/js/2.756518e8.chunk.js",
+    "static/js/2.756518e8.chunk.js.map": "/ContactCrud/static/js/2.756518e8.chunk.js.map",
+    "static/js/3.9de56de8.chunk.js": "/ContactCrud/static/js/3.9de56de8.chunk.js",
+    "static/js/3.9de56de8.chunk.js.map": "/ContactCrud/static/js/3.9de56de8.chunk.js.map",
+    "index.html": "/ContactCrud/index.html",
+    "static/css/2.83342f34.chunk.css.map": "/ContactCrud/static/css/2.83342f34.chunk.css.map",
+    "static/css/main.a2791706.chunk.css.map": "/ContactCrud/static/css/main.a2791706.chunk.css.map",
+    "static/js/2.756518e8.chunk.js.LICENSE.txt": "/ContactCrud/static/js/2.756518e8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b141591.js",
+    "static/css/2.83342f34.chunk.css",
+    "static/js/2.756518e8.chunk.js",
+    "static/css/main.a2791706.chunk.css",
+    "static/js/main.0be7c36b.chunk.js"
+  ]
+}
