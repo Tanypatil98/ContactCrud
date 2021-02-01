@@ -43,8 +43,8 @@ const Modal = (props) => {
     } else {
       setLStrerror('');
     }
-    if (phone.match(/\b\d+\b/g) === null) {
-      setNumerror("Please Enter The Correct Number");
+    if (phone.match(/^(\+91[-\s]?)?[0]?(91)?[6789]\d{9}$/g) === null) {
+      setNumerror("Please Enter The Correct Number 10 digit (+91 include or not)");
       check = false;
     } else {
       setNumerror('');
@@ -73,7 +73,7 @@ const Modal = (props) => {
   e.preventDefault();
    if (email !== '' && firstName !== '' && lastName !== '' && phone !== '' && age !== '') {
      let valid = handleValid();
-
+      console.log(valid);
      if (valid) {
   const detail = {email: email,
     firstName: firstName,
@@ -81,10 +81,11 @@ const Modal = (props) => {
     phone: phone,
     age: age };
     dispatch(actionType.updateContact(props.id, detail));
+       dispatch(actionType.fetchContact());
+       props.modalClosed();
   }
 }
-    dispatch(actionType.fetchContact());
-    props.modalClosed();
+    
 };
 
         return (

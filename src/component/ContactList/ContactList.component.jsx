@@ -22,11 +22,11 @@ const ConatctList = props => {
           <tbody>
         {props.details.map(ig => (
           <tr key={ig.id} >
-            <td>{ig.firstName}</td>
-            <td>{ig.lastName}</td>
-            <td>{ig.email}</td>
-            <td>{ig.phone}</td>
-            <td>{ig.age}</td>
+            <td style={{marginTop: '10px'}}>{ig.firstName}</td>
+            <td style={{ marginTop: '10px' }}>{ig.lastName}</td>
+            <td style={{ marginTop: '10px' }}>{ig.email}</td>
+            <td style={{ marginTop: '10px' }}>{ig.phone}</td>
+            <td style={{ marginTop: '10px' }}>{ig.age}</td>
             <td><button className="btn btn-outline-info" onClick={() => {props.onEdit(ig.id)}} style={{color: 'blue'}}>Edit </button>
             <button className="btn btn-outline-info" onClick={() => {props.onDelete(ig.id)}} style={{color: 'red'}}>Delete</button>
             </td>

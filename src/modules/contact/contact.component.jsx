@@ -42,8 +42,8 @@ const Contact = () => {
         } else {
             setLStrerror('');
         }
-         if (phone.match(/\b\d+\b/g) === null   ){
-            setNumerror("Please Enter The Correct Number");
+        if (phone.match(/^(\+91[-\s]?)?[0]?(91)?[6789]\d{9}$/g) === null   ){
+            setNumerror("Please Enter The Correct Number 10 digit (+91 include or not)");
              check = false;
          } else {
              setNumerror('');
