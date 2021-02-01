@@ -1,14 +1,32 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import './App.css';
-import AddContactPage from './container/contact/contact.component';
-import ContactHomeList from './container/List/list.component';
-import HomePage from './container/Homepage.component';
-import {toast} from 'react-toastify';  
-import 'react-toastify/dist/ReactToastify.css';  
+import Menu from './component/Menu/Menu';
+import Page404 from './component/Page404/index';
+import modules from './modules';
+import { useEffect, useState, useCallback } from 'react';
 
-toast.configure();
 
 function App() {
+
+  const [routes, setRoutes] = useState(null);
+
+  const renderRoutes = useCallback(() => {
+    if (routes) {
+      return;
+    }
+
+    let _routes = Object.keys(modules).map((item) => (
+      <Route key={`route_${item}`} exact path={item} component={withRouter(modules[item])} />
+    ));
+
+    setRoutes(_routes);
+  }, [routes]);
+
+  useEffect(() => {
+    renderRoutes();
+  }, [renderRoutes]);
+
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -16,16 +34,14 @@ function App() {
           Contact Details
         </p>
       </header>
-      <HomePage />
+      <Menu />
       <Switch>
-        <Route exact path='/add_contact' component={AddContactPage} />
-        <Route path='/contact_list' component={ContactHomeList} />
-        <Route path='/' render={() => {toast.info('Please Select Any One Of These Options',  
-           {position: toast.POSITION.BOTTOM_CENTER});}} />
+        {routes}
+        <Route component={Page404} />
       </Switch>
+      
     </div>
   );
 }
-
 
 export default App;
